@@ -1,0 +1,6 @@
+[2026-01-02 04:40:30,934] INFO PHASE3_RF: Train X=(134134, 20, 67) Val X=(28743, 20, 67) Test X=(28744, 20, 67)
+[2026-01-02 04:40:30,936] INFO PHASE3_RF: Classes=['BENIGN', 'DDoS', 'FTP-Patator', 'PortScan', 'SSH-Patator']
+[2026-01-02 04:40:40,410] INFO PHASE3_RF: RF strategy=agg -> Train features shape=(134134, 268)
+[2026-01-02 04:40:56,363] INFO PHASE3_RF: val: macro_f1=0.719345 weighted_f1=0.998014 acc=0.998226
+[2026-01-02 04:40:56,783] INFO PHASE3_RF: test: macro_f1=0.729681 weighted_f1=0.998237 acc=0.998400
+[2026-01-02 04:40:56,842] INFO PHASE3_RF: Wrote run_dir: results/phase3/rf/20260102_044028

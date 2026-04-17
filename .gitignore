@@ -1,0 +1,43 @@
+# Python cache / compiled artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment / local config
+.env
+.python-version
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Test / build / local outputs
+.pytest_cache/
+.mypy_cache/
+ruff_cache/
+outputs/
+
+# Notebook / misc
+.ipynb_checkpoints/
+
+# Optional: uncomment if you do NOT want historical experiment archives in Git
+# archive/
+
+# Optional: uncomment if you want only deployment artifacts and not demo sequence data
+# data/processed/sequences/
+
+# Keep:
+# - app/
+# - artifacts/
+# - configs/
+# - src/
+# - tests/
+# - README.md
+# - requirements.txt

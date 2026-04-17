@@ -1,0 +1,12 @@
+{
+  "python": "Python=3.11.0 | Platform=Windows-10-10.0.26200-SP0 | Exec=C:\\Users\\Silencio\\Desktop\\nids-seq2seq-convlstm\\.venv\\Scripts\\python.exe",
+  "torch": {
+    "torch_version": "2.9.1+cu128",
+    "cuda_available": true,
+    "device": "cuda",
+    "cuda_version": "12.8",
+    "cudnn_version": "91002",
+    "gpu_name": "NVIDIA GeForce RTX 4070 Laptop GPU"
+  },
+  "time": "2026-01-05 09:25:42"
+}

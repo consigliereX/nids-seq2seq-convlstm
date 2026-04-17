@@ -1,0 +1,41 @@
+[2026-01-05 10:19:37,034] INFO PHASE4_HYBRID: Train X=(134134, 20, 67) Val X=(28743, 20, 67) Test X=(28744, 20, 67)
+[2026-01-05 10:19:37,034] INFO PHASE4_HYBRID: Classes=['BENIGN', 'DDoS', 'FTP-Patator', 'PortScan', 'SSH-Patator']
+[2026-01-05 10:19:44,605] INFO PHASE4_HYBRID: Seq2Seq pretrain: epochs=4 bs=512 amp=True
+[2026-01-05 10:19:47,642] INFO PHASE4_HYBRID: pretrain epoch=1 mse=0.290743
+[2026-01-05 10:19:50,743] INFO PHASE4_HYBRID: pretrain epoch=2 mse=0.166056
+[2026-01-05 10:19:53,516] INFO PHASE4_HYBRID: pretrain epoch=3 mse=0.145300
+[2026-01-05 10:19:56,366] INFO PHASE4_HYBRID: pretrain epoch=4 mse=0.132443
+[2026-01-05 10:19:56,377] INFO PHASE4_HYBRID: Saved pretrained Seq2Seq -> results/phase4/ablations/20260105_092539/hybrid_loss_balanced_softmax/seed_1/seq2seq_pretrained.pt
+[2026-01-05 10:19:56,420] INFO PHASE4_HYBRID: Loaded pretrained Seq2Seq weights into model.ae.
+[2026-01-05 10:19:56,422] INFO PHASE4_HYBRID: loss=balanced_softmax label_smoothing=0
+[2026-01-05 10:19:56,422] INFO PHASE4_HYBRID: epoch=1: encoder frozen
+[2026-01-05 10:22:08,544] INFO PHASE4_HYBRID: epoch=1 loss=0.575494 val_macro_f1=0.530409 val_macro_f1_excl_ssh=0.663011 val_weighted_f1=0.924757
+[2026-01-05 10:22:08,576] INFO PHASE4_HYBRID: epoch=2: encoder frozen
+[2026-01-05 10:24:21,875] INFO PHASE4_HYBRID: epoch=2 loss=0.250598 val_macro_f1=0.531361 val_macro_f1_excl_ssh=0.664201 val_weighted_f1=0.926315
+[2026-01-05 10:24:21,893] INFO PHASE4_HYBRID: scheduler=onecycle steps=6026 after_unfreeze_only=True max_lr_enc=5e-05 max_lr_head=0.00035
+[2026-01-05 10:24:21,893] INFO PHASE4_HYBRID: epoch=3: encoder unfrozen enc_lr_init=5e-06 head_lr_init=3.5e-05
+[2026-01-05 10:26:37,540] INFO PHASE4_HYBRID: epoch=3 loss=0.150880 val_macro_f1=0.568381 val_macro_f1_excl_ssh=0.710476 val_weighted_f1=0.963640
+[2026-01-05 10:28:53,348] INFO PHASE4_HYBRID: epoch=4 loss=0.096219 val_macro_f1=0.589811 val_macro_f1_excl_ssh=0.737264 val_weighted_f1=0.974744
+[2026-01-05 10:31:09,728] INFO PHASE4_HYBRID: epoch=5 loss=0.047141 val_macro_f1=0.592988 val_macro_f1_excl_ssh=0.741235 val_weighted_f1=0.968447
+[2026-01-05 10:33:25,212] INFO PHASE4_HYBRID: epoch=6 loss=0.026353 val_macro_f1=0.589581 val_macro_f1_excl_ssh=0.736977 val_weighted_f1=0.944660
+[2026-01-05 10:35:40,971] INFO PHASE4_HYBRID: epoch=7 loss=0.019908 val_macro_f1=0.591663 val_macro_f1_excl_ssh=0.739578 val_weighted_f1=0.949032
+[2026-01-05 10:37:56,929] INFO PHASE4_HYBRID: epoch=8 loss=0.016386 val_macro_f1=0.598840 val_macro_f1_excl_ssh=0.748550 val_weighted_f1=0.963015
+[2026-01-05 10:40:13,203] INFO PHASE4_HYBRID: epoch=9 loss=0.014063 val_macro_f1=0.591748 val_macro_f1_excl_ssh=0.739685 val_weighted_f1=0.947919
+[2026-01-05 10:42:28,677] INFO PHASE4_HYBRID: epoch=10 loss=0.012464 val_macro_f1=0.603775 val_macro_f1_excl_ssh=0.754719 val_weighted_f1=0.971737
+[2026-01-05 10:44:44,765] INFO PHASE4_HYBRID: epoch=11 loss=0.011135 val_macro_f1=0.611921 val_macro_f1_excl_ssh=0.764901 val_weighted_f1=0.980676
+[2026-01-05 10:47:00,604] INFO PHASE4_HYBRID: epoch=12 loss=0.010285 val_macro_f1=0.619301 val_macro_f1_excl_ssh=0.774126 val_weighted_f1=0.985226
+[2026-01-05 10:49:16,135] INFO PHASE4_HYBRID: epoch=13 loss=0.009392 val_macro_f1=0.610675 val_macro_f1_excl_ssh=0.763343 val_weighted_f1=0.977896
+[2026-01-05 10:51:33,651] INFO PHASE4_HYBRID: epoch=14 loss=0.008466 val_macro_f1=0.618238 val_macro_f1_excl_ssh=0.772797 val_weighted_f1=0.984218
+[2026-01-05 10:53:51,497] INFO PHASE4_HYBRID: epoch=15 loss=0.007933 val_macro_f1=0.616742 val_macro_f1_excl_ssh=0.770927 val_weighted_f1=0.982251
+[2026-01-05 10:56:09,851] INFO PHASE4_HYBRID: epoch=16 loss=0.007925 val_macro_f1=0.619648 val_macro_f1_excl_ssh=0.774560 val_weighted_f1=0.984401
+[2026-01-05 10:58:27,482] INFO PHASE4_HYBRID: epoch=17 loss=0.007181 val_macro_f1=0.617702 val_macro_f1_excl_ssh=0.772127 val_weighted_f1=0.983284
+[2026-01-05 11:00:45,336] INFO PHASE4_HYBRID: epoch=18 loss=0.006756 val_macro_f1=0.634036 val_macro_f1_excl_ssh=0.792545 val_weighted_f1=0.989918
+[2026-01-05 11:03:03,795] INFO PHASE4_HYBRID: epoch=19 loss=0.006260 val_macro_f1=0.628758 val_macro_f1_excl_ssh=0.785947 val_weighted_f1=0.988132
+[2026-01-05 11:05:22,316] INFO PHASE4_HYBRID: epoch=20 loss=0.006183 val_macro_f1=0.636866 val_macro_f1_excl_ssh=0.796083 val_weighted_f1=0.990650
+[2026-01-05 11:07:40,675] INFO PHASE4_HYBRID: epoch=21 loss=0.005961 val_macro_f1=0.631524 val_macro_f1_excl_ssh=0.789405 val_weighted_f1=0.989104
+[2026-01-05 11:10:00,274] INFO PHASE4_HYBRID: epoch=22 loss=0.005740 val_macro_f1=0.622758 val_macro_f1_excl_ssh=0.778447 val_weighted_f1=0.985657
+[2026-01-05 11:12:18,085] INFO PHASE4_HYBRID: epoch=23 loss=0.005614 val_macro_f1=0.628228 val_macro_f1_excl_ssh=0.785285 val_weighted_f1=0.987947
+[2026-01-05 11:14:36,928] INFO PHASE4_HYBRID: epoch=24 loss=0.005498 val_macro_f1=0.630930 val_macro_f1_excl_ssh=0.788662 val_weighted_f1=0.988830
+[2026-01-05 11:16:56,009] INFO PHASE4_HYBRID: epoch=25 loss=0.005569 val_macro_f1=0.630909 val_macro_f1_excl_ssh=0.788636 val_weighted_f1=0.988830
+[2026-01-05 11:17:32,877] INFO PHASE4_HYBRID: VAL threshold-tune: ftp_min_threshold=0.950 ssh_threshold=0.200 val_macro_f1=0.712984 val_macro_f1_excl_ssh=0.891230 val_weighted_f1=0.997380 val_acc=0.996730
+[2026-01-05 11:17:57,844] INFO PHASE4_HYBRID: Wrote run_dir: results/phase4/ablations/20260105_092539/hybrid_loss_balanced_softmax/seed_1

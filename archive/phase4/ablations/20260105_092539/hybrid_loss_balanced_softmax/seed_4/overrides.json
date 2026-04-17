@@ -1,0 +1,8 @@
+{
+  "phase4": {
+    "hybrid": {
+      "variant": "hybrid",
+      "loss": "balanced_softmax"
+    }
+  }
+}

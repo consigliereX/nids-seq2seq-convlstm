@@ -1,0 +1,17 @@
+# Core
+numpy>=1.26
+pandas>=2.1
+scikit-learn>=1.3
+PyYAML>=6.0
+tqdm>=4.66
+joblib>=1.3
+pytest>=7.0
+
+# Data IO
+pyarrow>=14.0
+
+# Plotting
+matplotlib>=3.8
+
+# Deep Learning
+torch>=2.2

@@ -1,0 +1,6 @@
+,BENIGN,DDoS,FTP-Patator,PortScan,SSH-Patator
+BENIGN,19664.0,34.0,172.0,1.0,159.0
+DDoS,2.0,3837.0,1.0,0.0,0.0
+FTP-Patator,52.0,0.0,3.0,0.0,0.0
+PortScan,20.0,0.0,0.0,4785.0,13.0
+SSH-Patator,1.0,0.0,0.0,0.0,0.0

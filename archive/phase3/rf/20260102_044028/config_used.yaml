@@ -1,0 +1,107 @@
+project: nids_seq2seq_convlstm
+seed: 42
+
+paths:
+  data_dir: data
+  results_dir: results
+  paper_assets_dir: paper_assets
+
+reproducibility:
+  deterministic: true
+  cudnn_deterministic: true
+  cudnn_benchmark: false
+
+logging:
+  level: INFO
+  log_to_file: true
+  log_dir: results/logs
+
+data:
+  cicids2017:
+    raw_dir: data/raw/CICIDS2017
+    files:
+      - Tuesday-WorkingHours.pcap_ISCX.csv
+      - Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv
+      - Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv
+    label_col: Label
+    timestamp_col: Timestamp
+    leak_cols:
+      - Flow ID
+      - Source IP
+      - Destination IP
+      - Source Port
+      - Destination Port
+      - Timestamp
+      - Flow Start Time
+    output_dir: data/processed
+    output_stem: cicids2017_clean
+    drop_constant_cols: true
+    nan_policy:
+      # In Phase 1 we sanitize Inf->NaN and keep NaN;
+      # train-time scripts will impute using TRAIN-ONLY statistics (no leakage).
+      keep_nan: true
+
+sequences:
+  input_parquet: data/processed/cicids2017_clean.parquet
+  label_col: Label
+  order_col: order_index
+
+  # sliding window
+  seq_len: 20
+  stride: 5
+
+  # label modes: "majority" (multiclass) or "any_attack" (binary)
+  label_mode: majority
+  binary_positive_label: ATTACK  # only used for any_attack
+
+  split:
+    mode: per_source_file_stratified
+    source_file_col: source_file
+    min_per_class_per_split: 1
+    train_frac: 0.70
+    val_frac: 0.15
+    test_frac: 0.15
+
+phase3:
+  # Where Phase2 saved the split NPZs
+  seq_npz:
+    train: data/processed/sequences/cicids2017_seq_T20_S5_train.npz
+    val:   data/processed/sequences/cicids2017_seq_T20_S5_val.npz
+    test:  data/processed/sequences/cicids2017_seq_T20_S5_test.npz
+
+  output_dir: results/phase3
+
+  preprocessing:
+    # Train-only stats; applied to val/test with no leakage
+    imputer: median
+    scaler: standard
+
+  rf:
+    # "agg" = time aggregation (mean/std/min/max per feature)
+    # "flatten" = flatten (T*d)
+    strategy: agg
+    n_estimators: 200
+    max_depth: null
+    min_samples_leaf: 1
+    n_jobs: -1
+    class_weight: balanced_subsample
+
+  rnn:
+    cell: gru          # gru | lstm
+    hidden_size: 128
+    num_layers: 1
+    bidirectional: true
+    dropout: 0.2
+
+    batch_size: 512
+    epochs: 15
+    patience: 4
+    lr: 0.001
+    weight_decay: 0.0
+    max_grad_norm: 1.0
+
+    # Class weights can explode due to SSH=3; cap prevents instability.
+    class_weight_cap: 20.0
+
+    amp: true
+    num_workers: 0

@@ -1,0 +1,11 @@
+{
+  "ftp_min_threshold": 0.8500000000000001,
+  "ssh_threshold": 0.2,
+  "ssh_margin": 0.0,
+  "score": 0.9110562554692828,
+  "baseline_weighted_f1": 0.9816703839221772,
+  "chosen_weighted_f1": 0.9877166201724463,
+  "chosen_macro_f1": 0.6905244429519246,
+  "chosen_macro_f1_excl_ssh": 0.8620825923165152,
+  "chosen_accuracy": 0.9794732630553526
+}

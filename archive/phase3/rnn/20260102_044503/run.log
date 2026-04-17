@@ -1,0 +1,12 @@
+[2026-01-02 04:45:05,041] INFO PHASE3_RNN: Train X=(134134, 20, 67) Val X=(28743, 20, 67) Test X=(28744, 20, 67)
+[2026-01-02 04:45:05,041] INFO PHASE3_RNN: Classes=['BENIGN', 'DDoS', 'FTP-Patator', 'PortScan', 'SSH-Patator']
+[2026-01-02 04:45:18,401] INFO PHASE3_RNN: epoch=1 loss=0.189011 val_macro_f1=0.668128 val_weighted_f1=0.994200
+[2026-01-02 04:45:22,778] INFO PHASE3_RNN: epoch=2 loss=0.124337 val_macro_f1=0.714302 val_weighted_f1=0.997113
+[2026-01-02 04:45:26,031] INFO PHASE3_RNN: epoch=3 loss=0.083051 val_macro_f1=0.693325 val_weighted_f1=0.996132
+[2026-01-02 04:45:29,443] INFO PHASE3_RNN: epoch=4 loss=0.053922 val_macro_f1=0.662275 val_weighted_f1=0.993791
+[2026-01-02 04:45:32,651] INFO PHASE3_RNN: epoch=5 loss=0.034665 val_macro_f1=0.691727 val_weighted_f1=0.995994
+[2026-01-02 04:45:35,934] INFO PHASE3_RNN: epoch=6 loss=0.028481 val_macro_f1=0.703310 val_weighted_f1=0.996487
+[2026-01-02 04:45:35,934] INFO PHASE3_RNN: Early stopping: patience=4 reached.
+[2026-01-02 04:45:36,459] INFO PHASE3_RNN: val: macro_f1=0.714302 weighted_f1=0.997113 acc=0.996625
+[2026-01-02 04:45:36,883] INFO PHASE3_RNN: test: macro_f1=0.707840 weighted_f1=0.996966 acc=0.996312
+[2026-01-02 04:45:36,887] INFO PHASE3_RNN: Wrote run_dir: results/phase3/rnn/20260102_044503
