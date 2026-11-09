@@ -284,4 +284,6 @@ That makes it a strong starting point for:
 
 ## License
 
-MIT.
+The original source code is distributed under the [MIT License](LICENSE).
+
+Third-party datasets, pretrained model artifacts, and externally sourced files may have separate licenses or redistribution terms. Check their provenance and permissions before reuse; this repository's MIT notice does not supersede third-party rights.
